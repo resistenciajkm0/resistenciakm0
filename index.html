@@ -41,31 +41,7 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
 
-  <script>
-    var prodId = getParameterByName('prodId');
-
-
-    const inventario = [
-      { nombre: 'Rodrigo Salazar', ci: 444888 },
-      { nombre: 'Scarlett Johansson', ci: 111222 },
-      { nombre: 'Jimmy Hendrix', ci: 222333 },
-    ];
-
-    var item = inventario.find(item => item.ci === parseInt(prodId, 10));
-
-    function getParameterByName(name) {
-      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-    console.log(item.nombre);
-    function getMiembro() {
-      document.getElementById("nombres").innerHTML = item.nombre;
-      document.getElementById("ci").innerHTML = item.ci;
-    }
-
-  </script>
+  <script src="encript.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
