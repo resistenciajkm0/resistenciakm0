@@ -13,7 +13,7 @@
   <title>ResistenciaKM0</title>
 </head>
 
-<body style="background-color:lightgrey;">
+<body style="background-color:lightgrey;" onload="getMiembro()">
 
   <div class="col-md-12">
 
@@ -24,25 +24,46 @@
         <img class="card-img-top" style="width:350px" src="logo.png" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">CREDENCIAL OFICIAL</h4>
-          <h5 class="card-text"> <strong>Apellidos : </strong> Oconor </h5>
-          <h5 class="card-text"> <strong>Nombres : </strong> Bryan </h5>
-          <h5 class="card-text"> <strong>Circunscripción : </strong> 13 (Zona Este) </h5>
+          <h5 class="card-text"> <strong>Apellidos : </strong> <span id="nombres"></span> </h5>
+          <h5 class="card-text"> <strong>Cedula de Identidad : </strong> <span id="ci"></span> </h5>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <h1 id="holaMundo"> </h1>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
 
   <script>
+    var prodId = getParameterByName('prodId');
 
-    var miObjeto = { 'paterno': 'Salazar', 'materno': 'quispe', 'nombres': 'brian rodrigo', 'ci': '8468662' , 'circunscripcion':'cir 7'};
-    localStorage.setItem('8468662', JSON.stringify(miObjeto));
-    console.log('objeto-Guardado');
-    // Obtengo el string previamente salvado y luego
-    var guardado = localStorage.getItem('8468662');
-    console.log('objetoObtenido: ', JSON.parse(guardado));
+
+    const inventario = [
+      { nombre: 'Rodrigo Salazar', ci: 444888 },
+      { nombre: 'Scarlett Johansson', ci: 111222 },
+      { nombre: 'Jimmy Hendrix', ci: 222333 },
+    ];
+
+    var item = inventario.find(item => item.ci === parseInt(prodId, 10));
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    console.log(item.nombre);
+    function getMiembro() {
+      document.getElementById("nombres").innerHTML = item.nombre;
+      document.getElementById("ci").innerHTML = item.ci;
+    }
 
   </script>
 
