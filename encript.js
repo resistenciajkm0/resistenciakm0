@@ -18,8 +18,11 @@ const inventario = [
   { nombre: 'Misael Adhemar Poma Pereira ', ci: 6092626 },
   { nombre: 'Daniel Alberto Cuenca Moldez', ci: 2316748 },
   { nombre: 'Josue Viktor Morales Choque', ci: 6957485 },
-  
+{ nombre: 'Adrian Marcelo Rocha Bascope' , ci: 6888784},
+{ nombre: 'Edgar Marcelo Rocha Toledo' , ci: 2698394},
 ];
+
+
 
 var item = inventario.find(item => item.ci === parseInt(prodId, 10));
 
