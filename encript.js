@@ -30,10 +30,15 @@ const inventario = [
   { nombre: 'jonny Reynaldo Bustillos', ci: 2699792 },
   { nombre: 'Rafael Arcangel Quispe', ci: 3412812 },
   { nombre: 'Panfilo Montesinos Llanque', ci: 5975671 },
+
+  { nombre: 'Mia Bernal', ci: 6125733 },
+  { nombre: 'Alejandro Alvizuri', ci: 4789758 },
+  { nombre: 'Mario Eduardo Cutipa Salazar', ci: 6944327 },
+  { nombre: 'José Fernando Andrade Pedregal', ci: 4868028 },
+  { nombre: 'Aldair Mauricio Amancio Molina', ci: 9587703 },
+  { nombre: 'Manuel Rodríguez Paz', ci: 3499207 },
+  { nombre: 'José Eduardo Rodríguez Pereira', ci: 6761460 },
 ];
-
-
-
 var item = inventario.find(item => item.ci === parseInt(prodId, 10));
 
 function getParameterByName(name) {
