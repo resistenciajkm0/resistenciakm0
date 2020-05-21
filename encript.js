@@ -18,9 +18,18 @@ const inventario = [
   { nombre: 'Misael Adhemar Poma Pereira ', ci: 6092626 },
   { nombre: 'Daniel Alberto Cuenca Moldez', ci: 2316748 },
   { nombre: 'Josue Viktor Morales Choque', ci: 6957485 },
-{ nombre: 'Adrian Marcelo Rocha Bascope' , ci: 6888784},
-{ nombre: 'Edgar Marcelo Rocha Toledo' , ci: 2698394},
-{ nombre: 'Marco antonio Ayarde Romero' , ci: 3680550},
+
+  { nombre: 'Adrian Marcelo Rocha Bascope', ci: 6888784 },
+  { nombre: 'Edgar Marcelo Rocha Toledo', ci: 2698394 },
+  { nombre: 'Marco antonio Ayarde Romero', ci: 3680550 },
+
+  { nombre: 'Emilia gorena Veizaga ', ci: 4911451 },
+  { nombre: 'Ever Ronald flores jove ', ci: 4896528 },
+  { nombre: 'Maritza villca ', ci: 6187976 },
+  { nombre: 'Edwin Ivan Flores jove ', ci: 4892843 },
+  { nombre: 'jonny Reynaldo Bustillos', ci: 2699792 },
+  { nombre: 'Rafael Arcangel Quispe', ci: 3412812 },
+  { nombre: 'Panfilo Montesinos Llanque', ci: 5975671 },
 ];
 
 
